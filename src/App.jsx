@@ -1,10 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import MainLayout from './mainlayout'
 
 function App() {
   return (
     <>
-      <h1 className='text-[20px]'>Hello, Vite!</h1>
+      <Routes>
+        <Route path="/" element={
+           <MainLayout>
+              
+           </MainLayout>
+        } />
+      </Routes>
     </>
   )
 }
