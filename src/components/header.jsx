@@ -10,7 +10,7 @@ export default function Header() {
     }
 
     return (
-        <header className="flex justify-between items-center px-4 lg:px-27.5 2xl:px-27 py-4 2xl:py-9 lg:py-7">
+        <header className="relative flex justify-between items-center px-4 lg:px-27.5 2xl:px-27 py-4 2xl:py-9 lg:py-7">
             {/* Left Navigation - Desktop */}
             <ul className="hidden lg:flex lg:gap-10">
                 <li className='hover:text-[#F62440] transition delay-200'><Link to="/">Men</Link></li>
@@ -30,7 +30,7 @@ export default function Header() {
 
             {/* Hamburger Menu - Mobile */}
             <button 
-                className="lg:hidden flex flex-col gap-1.5 cursor-pointer"
+                className="lg:hidden flex flex-col gap-1.5 cursor-pointer z-50"
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
             >
@@ -41,7 +41,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-full left-0 right-0 bg-white shadow-lg lg:hidden">
+                <div className="fixed top-16 left-0 right-0 bg-white shadow-lg lg:hidden z-40">
                     <ul className="flex flex-col gap-4 p-4">
                         <li className='hover:text-[#F62440] transition delay-200'><Link to="/" onClick={() => setIsOpen(false)}>Men</Link></li>
                         <li className='hover:text-[#F62440] transition delay-200'><Link to="/women" onClick={() => setIsOpen(false)}>Women</Link></li>
