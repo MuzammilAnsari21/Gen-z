@@ -1,7 +1,10 @@
+import GenZ from '@/assets/img/genz.png'
+import HeroSlider from '@/components/slider';
+
 export default function HeroBanner() {
     return (
         <>
-          <div className="h-130 bg-[#FFF2DB] justify-center flex px-25 py-10">
+          <div className="h-130 bg-[#FFF2DB] justify-center flex px-25 py-10 relative">
               <div className="flex flex-col justify-between container">
                     <div>
                         <h1 className="w-fit border-b-2 py-2 pr-5 font-semibold sm:text-[12px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px]">
@@ -9,9 +12,7 @@ export default function HeroBanner() {
                         </h1>
                     </div>
 
-                    <h1 className="text-center font-semibold sm:text-[12px] md:text-[14px] lg:text-[14px] xl:text-[280px] 2xl:text-[14px] p-0 m-0">
-                             GEN-Z
-                    </h1>
+                    <img src={GenZ} alt="GenZ" />
 
                     <div className="flex justify-between items-end">
                         <div className="flex gap-2">
@@ -27,6 +28,7 @@ export default function HeroBanner() {
                         </h1>
                     </div>
               </div>
+              <HeroSlider />
           </div>
         </>
     )
