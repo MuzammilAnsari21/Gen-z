@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import MainLayout from './mainlayout'
+import MainLayout from '@/mainlayout'
+import HeroBanner from '@/components/heroBanner'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={
            <MainLayout>
-              
+              <HeroBanner />
            </MainLayout>
         } />
       </Routes>
